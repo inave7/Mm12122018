@@ -104,6 +104,8 @@ public class MainActivity extends AppCompatActivity {
                             artistAdapter = new MyAdapter(mContext, mArtists, new CustomItemClickListener() {
                                 @Override
                                 public void onItemClick(View v, int position) {
+                                    songsOfArtist.clear();
+                                    songPosInArtist.clear();
                                     Snackbar.make(getWindow().getDecorView().getRootView(), "Artists->Songs \n \n \n", Snackbar.LENGTH_LONG).show();
                                     ImgBtnBack.setVisibility(View.VISIBLE);
                                     ImgBtnBack.setOnClickListener(new View.OnClickListener() {
@@ -162,6 +164,8 @@ public class MainActivity extends AppCompatActivity {
                             albumAdapter = new MyAdapter(mContext, mAlbums, new CustomItemClickListener() {
                                 @Override
                                 public void onItemClick(View v, int position) {
+                                    songsOfAlbum.clear();
+                                    songPosInAlbum.clear();
                                     Snackbar.make(getWindow().getDecorView().getRootView(), "Albums->Songs \n \n \n", Snackbar.LENGTH_LONG).show();
                                     ImgBtnBack.setVisibility(View.VISIBLE);
                                     ImgBtnBack.setOnClickListener(new View.OnClickListener() {
