@@ -168,6 +168,11 @@ public class PlayerActivity extends AppCompatActivity {
         ImgvFav.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                for (int i = 0 ; i < mainActivity.mAudioSongs.size(); i++) {
+                    if (songPosition < mAudioSongs.size())
+                    if (mainActivity.mAudioSongs.get(i).getTitle().equals(mAudioSongs.get(songPosition).getTitle()))
+                        songPosition = i;
+                }
                 if (mainActivity.mAudioSongs.get(songPosition).isFavorite) {
                     ImgvFav.setImageResource(R.drawable.fav_disabled);
                     mainActivity.mAudioSongs.get(songPosition).isFavorite = false;
